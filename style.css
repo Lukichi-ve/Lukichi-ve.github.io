@@ -1,0 +1,249 @@
+body{
+    background: linear-gradient(to bottom, #041947, #065269fa, #023520fa);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h1{
+    font-size: 4em;
+    font-weight: bold;
+    color: #ffffff;
+    /*-webkit-text-stroke: 2px #41B0FF;*/
+}
+
+h2{
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1.5px 15px rgb(36, 228, 100);
+    background-color: #0cbcc23d;
+    padding: 1% 1% 1% 5%;
+    border-radius: 20px;
+}
+
+/*--------Barra de navegación--------*/
+#busqueda{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    display:flex;
+    align-items: center;
+    float: left;
+    padding: 1% 5%;
+    height: 30px;
+    width:90%;
+    background-color: rgba(18, 33, 65, 0.5);
+    position: sticky; top: 0;
+    z-index: 1000;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    overflow:hidden;
+}
+nav a{
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 20px;
+    border: none;
+    
+}
+nav a:hover{
+    color:#2668f5;
+    border: #2668f5a4 solid 2px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px #3975f783;
+}
+
+
+/*---------Inicio-------*/
+header{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    padding: 1%;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    box-shadow: -1px 15px 30px rgba(0, 0, 0, 0.25);
+    /*background: url(img/estrellas.png);
+    background-repeat: repeat;
+    background-size: auto;
+    
+    
+    animation: estrellasScroll 1800s linear infinite;*/
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/img/estrellas.png) center center;
+  filter: blur(2px);
+  z-index: -1;
+  box-shadow: 1px 100px 10px rgba(0, 0, 0, 0.253);
+  animation: estrellasScroll 1800s linear infinite;
+}
+/*----Animación------*/
+@keyframes estrellasScroll {
+  from {
+    background-position: 0 0;
+    backdrop-filter: blur(30px);
+  }
+  to {
+    background-position: 0 100000px;
+    backdrop-filter: blur(30px);
+  }
+}
+
+header img{
+    margin: 5% 5% 0% 5%;
+    width: 250px;
+    object-fit:cover;
+    border: white solid 3px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.377);
+    transition: transform 0.5s ease;
+}
+
+header img:hover{
+    transform: scale(1.2);
+}
+header h1{
+    text-shadow: 1px 1px 100px rgba(71, 255, 255, 0.911);
+    transition: transform 0.5s ease;
+}
+header h1:hover{
+    transform: scale(1.2);
+}
+
+
+/*---------Contenido Principal-------*/
+main{
+    margin: 5% 10% 2%;
+    padding: 5% 5% 3%;
+    border-radius: 20px;
+    box-shadow: -5px 5px 100px rgba(0, 0, 0, 0.3);
+}
+
+/*----------Sobre mi----------*/
+#sobre_mi p{
+    text-indent: 5%;
+    font-size: 1.5em;
+    color: #47dbe6;
+}
+
+
+/*--------Conocimientos--------*/
+#conoci_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.conoci_img{
+    margin-top: 5%;
+    transition: transform 0.6s ease;
+}
+.conoci_img:hover{
+    transform: scale(1.1);
+    
+}
+
+#logo_js{
+    width: 220px;
+}
+
+
+/*----------Contacto----------*/
+#form{
+    font-size: 1.1em;
+    color: white;
+    padding: 5% 5% 2% 5%;
+    margin: 10% auto 0%;
+    background: linear-gradient(to bottom, #1ed3a64d, #0b723e31, #10220100);
+    border-radius: 20px;
+    max-width: 400px;
+}
+fieldset{
+    border-style: none;
+    padding: 8% 12% 0% 2%;
+    font-size: 1.1em;
+}
+fieldset h2{
+    margin:0px;
+    color: #e6fffa;
+    -webkit-text-stroke: 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+label{
+    min-width: 100px;
+}
+.campo_form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    max-width: 400px;
+}
+#nombre, #correo, #text{
+    padding: 4px;
+    border: 2px solid rgb(55, 170, 51);
+    border-radius: 5px;
+    flex: 1;
+}
+#boton{
+  background-color:#197048d0;
+  color: white;
+  font-size: 0.8em;
+  padding: 10px 20px;
+  border: rgb(21, 90, 19) solid 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-content: flex-end;
+  transition: background-color 0.3s ease;
+}
+#boton:hover {
+  background-color: #0b6354d0;
+}
+#boton:active {
+  transform: translateY(1.8px);
+}
+
+
+/*----------Pie de página-----------*/
+footer{
+    margin-top: 3%;
+    height: 80px;
+    margin-bottom: 3%;
+}
+footer div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+}
+.foot_img{
+    margin-right:15px ;
+    width: 50px;
+    background-color: #13927254;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.foot_img:hover{
+    background-color: #29f3c167;
+}
