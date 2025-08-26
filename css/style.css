@@ -10,7 +10,6 @@ h1{
     font-size: 4em;
     font-weight: bold;
     color: #ffffff;
-    /*-webkit-text-stroke: 2px #41B0FF;*/
 }
 
 h2{
@@ -34,7 +33,7 @@ h2{
     width:90%;
     background-color: rgba(18, 33, 65, 0.5);
     position: sticky; top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 nav{
     display: flex;
@@ -46,23 +45,78 @@ nav{
     overflow:hidden;
 }
 nav a{
+    display:block;
     font-size: 1.1em;
+    max-height: 21px;
+    overflow: hidden;
     color: white;
     font-weight: bold;
     text-decoration: none;
     padding: 5px 20px;
     border: none;
-    
 }
 nav a:hover{
+    max-height: 25px;
     color:#2668f5;
     border: #2668f5a4 solid 2px;
     border-radius: 5px;
     box-shadow: 1px 1px 15px #3975f783;
 }
 
+/*---Navbar para moviles---*/
+#mobile-navbar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    left: 0;
+    background-color: rgba(20, 76, 122, 0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+.menu{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    margin: 10%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+.menu a, .close-menu{
+    font-size: 1.5em;
+    padding: 1% 5%;
+    margin:1% 0%;
+    border: none;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+.menu a{
+    font-size: 100%;
+}
+menu a:hover, .close-menu:hover{
+    cursor: pointer;
+    color:#2668f5;
+}
+.open-menu{
+    display: none;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+.open-menu:hover{
+    color:#2668f5;
+}
+@media only screen and (max-width: 600px) {
+    .navbar {display: none;}
+    .close-menu {display: inherit;}
+    .open-menu {display: inherit;}
+}
 
-/*---------Inicio-------*/
+
+/*--------- Inicio -------*/
 header{
     display: grid;
     justify-items: center;
@@ -75,12 +129,6 @@ header{
     position: relative;
     z-index: 10;
     box-shadow: -1px 15px 30px rgba(0, 0, 0, 0.25);
-    /*background: url(img/estrellas.png);
-    background-repeat: repeat;
-    background-size: auto;
-    
-    
-    animation: estrellasScroll 1800s linear infinite;*/
 }
 header::before {
   content: '';
@@ -95,6 +143,7 @@ header::before {
   box-shadow: 1px 100px 10px rgba(0, 0, 0, 0.253);
   animation: estrellasScroll 1800s linear infinite;
 }
+
 /*----Animación------*/
 @keyframes estrellasScroll {
   from {
@@ -106,7 +155,7 @@ header::before {
     backdrop-filter: blur(30px);
   }
 }
-
+/*Contenido del header*/
 header img{
     margin: 5% 5% 0% 5%;
     width: 250px;
@@ -167,7 +216,7 @@ main{
 
 
 /*----------Contacto----------*/
-#form{
+.form{
     font-size: 1.1em;
     color: white;
     padding: 5% 5% 2% 5%;
@@ -219,6 +268,11 @@ label{
 }
 #boton:active {
   transform: translateY(1.8px);
+}
+@media only screen and (max-width: 600px) {
+    .campo_form #text{
+        flex: 100%;
+    }
 }
 
 

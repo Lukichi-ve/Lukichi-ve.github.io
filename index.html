@@ -3,33 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Portfolio</title>
 </head>
 <body>
+    <!-- Sección de navegación -->
     <div id="busqueda">
-        <nav>
-            <a href="#inicio">Inicio</a>
+        <nav class="navbar">
+            <a href="#">Inicio</a>
             <a href="#sobreMi">Sobre mí</a>
             <a href="#conocimiento">Conocimientos</a>
             <a href="#contacto">Contacto</a>
         </nav>
+        <a class="open-menu">&#9776;</a>
     </div>
-    <header id="inicio">
+     <!-- Sección de navegación desplegable -->
+        <div id="mobile-navbar">
+            <a class="close-menu">&times;</a>
+            <div class="menu"> 
+                <a href="#sobreMi">Sobre mí</a>
+                <a href="#conocimiento">Conocimientos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+  
+    <!-- Encabezado principal -->
+    <header>
         <img src="img/lucas.png" alt="Foto de lucas">
         <h1>Lucas Velazquez</h1>
     </header>
+
     
+    
+
+    <!-- Contenido principal -->
     <main>
+
         <br id="sobreMi">
         <section id="sobre_mi">
             <h2>Sobre mí</h2>
             <p>
                 Vivo en Fray Marcos, departamento de Florida, tengo 22 años y actualmente 
-                estoy estudiando y adentrandome en el mundo del desarrollo en JaP 💪 
+                estoy estudiando y adentrandome en el mundo del desarrollo web en JaP.💪 
             </p>
         </section>
+
         <br id="conocimiento">
         <section>
             <h2>Conocimientos</h2>
@@ -40,10 +59,11 @@
             </div>
         </section>
 
-        <section id="form">
+        <!-- Sección de contacto -->
+        <section id="contacto" class="form">
         <form>
             <fieldset>
-                <legend><h2 id="contacto">Contacto</h2></legend>
+                <legend><h2>Contacto</h2></legend>
                 <div id="contenedor_contacto">
                     <div class="campo_form"><label for="nombre">Nombre:</label> <input id="nombre" name="nombre" type="text" placeholder="Nombre" required></div>
                     <br>
@@ -57,6 +77,8 @@
         </form>
         </section>
     </main>
+
+    <!-- Pie de página -->
     <footer>
         <div>
             <a href="https://www.linkedin.com/in/lucas-velazquez-3a39052a4" target="_blank"><img src="img/linkedin_logo.png" alt="LinkedIn" class="foot_img"></a>
@@ -64,5 +86,7 @@
             <a href="https://www.instagram.com" target="_blank"><img src="img/instagram_logo.png" alt="Instagram" class="foot_img"></a>
         </div>
     </footer>
+
+    <script src="js/nav.js"></script>
 </body>
 </html>
