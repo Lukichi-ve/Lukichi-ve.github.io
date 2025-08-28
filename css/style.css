@@ -65,6 +65,8 @@ nav a:hover{
 
 /*---Navbar para moviles---*/
 #mobile-navbar{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 1.4em;
     height: 100%;
     width: 0;
     position: fixed;
@@ -85,18 +87,17 @@ nav a:hover{
     left: 5%;
 }
 .menu a, .close-menu{
-    font-size: 1.5em;
     padding: 1% 5%;
     margin:1% 0%;
     border: none;
-    font-weight: 700;
     color: white;
     text-decoration: none;
 }
 .menu a{
-    font-size: 100%;
+    padding: 1px;
+    margin: 20px 0px;
 }
-menu a:hover, .close-menu:hover{
+.menu a:hover, .close-menu:hover{
     cursor: pointer;
     color:#2668f5;
 }
@@ -104,14 +105,18 @@ menu a:hover, .close-menu:hover{
     display: none;
     font-weight: 700;
     color: white;
-    cursor: pointer;
 }
 .open-menu:hover{
+    cursor: pointer;
     color:#2668f5;
 }
 @media only screen and (max-width: 600px) {
     .navbar {display: none;}
-    .close-menu {display: inherit;}
+    .close-menu {
+        display: inherit;
+        font-size: 1.5em;
+        width: 40px;
+    }
     .open-menu {display: inherit;}
 }
 
